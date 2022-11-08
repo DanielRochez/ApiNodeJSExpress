@@ -2,6 +2,7 @@ const express = require('express');
 const app =express();
 const morgan=require('morgan');
 
+app.use(require('./routes/index.js'));
 //configuraciones
 app.set('port', process.env.PORT || 3000);
 app.set('json spaces', 2)
