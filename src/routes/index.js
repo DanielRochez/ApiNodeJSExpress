@@ -1,12 +1,9 @@
 const { Router} = require('express');
 const router = Router();
+const path = require('path')
 
 //Raiz
 router.get('/', (req, res) =>{
-    res.json(
-        {
-            "Title": "Hola mundo desde index xd"
-        }
-    );
+    res.sendFile(path.join(__dirname, 'form.html'))
 })
 module.exports = router;
